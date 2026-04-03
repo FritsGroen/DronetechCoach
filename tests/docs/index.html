@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DroneTech Coach</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>DroneTech Coach</h1>
+        <p>Onderwijsassistent voor drone-techniek</p>
+      </div>
+    </header>
+
+    <section class="banner warning">
+      Bij rook, hitte, crash of twijfel: stop en raadpleeg docent of werkplaatsbegeleider.
+    </section>
+
+    <section class="quick-actions">
+      <button data-prompt="Wat is een ESC?">Basiskennis</button>
+      <button data-prompt="Geef de pre-flight checklist">Pre-flight</button>
+      <button data-prompt="Geef de bench test checklist">Bench test</button>
+      <button data-prompt="Wat controleer ik na een harde landing?">Onderhoud</button>
+      <button data-prompt="Maak een compact PvE-format voor een droneproject">PvE</button>
+      <button data-prompt="Maak een user story voor een pre-flight checklist">User story</button>
+      <button data-prompt="Geef een logboekformat voor een student">Logboek</button>
+      <button data-prompt="Geef een korte examenvluchtvoorbereiding">Examenvlucht</button>
+    </section>
+
+    <main id="chat" class="chat"></main>
+
+    <form id="chat-form" class="chat-form">
+      <label>
+        Rol
+        <select id="role-select">
+          <option value="student">Student</option>
+          <option value="docent">Docent</option>
+        </select>
+      </label>
+      <textarea id="message-input" placeholder="Stel je vraag over drone-techniek, checklists, PvE, logboeken of onderhoud..." rows="4"></textarea>
+      <div class="form-actions">
+        <button type="submit">Verstuur</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.20",
+  "version": "0.1.0",
+  "id": "11111111-2222-3333-4444-555555555555",
+  "developer": {
+    "name": "School / DroneTech Coach",
+    "websiteUrl": "https://jouwgebruikersnaam.github.io/dronetech-coach-starter/",
+    "privacyUrl": "https://jouwgebruikersnaam.github.io/dronetech-coach-starter/privacy.html",
+    "termsOfUseUrl": "https://jouwgebruikersnaam.github.io/dronetech-coach-starter/terms.html"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "DroneTech Coach",
+    "full": "DroneTech Coach voor drone-techniek"
+  },
+  "description": {
+    "short": "Onderwijsassistent voor drone-techniek.",
+    "full": "Pilot-assistent voor studenten en docenten voor vragen over drone-techniek, checklists, PvE's, user stories, logboeken en examenvluchtvoorbereiding."
+  },
+  "accentColor": "#0F172A",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://jouwgebruikersnaam.github.io/dronetech-coach-starter/index.html#/config",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ],
+      "context": [
+        "channelTab"
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "jouwgebruikersnaam.github.io",
+    "jouwdomein.nl"
+  ]
+}

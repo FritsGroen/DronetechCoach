@@ -1,0 +1,1181 @@
+[
+  {
+    "id": "01_basiskennis_001",
+    "title": "Inleiding",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "inleiding"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "basiskennis",
+      "definities",
+      "drone-techniek"
+    ],
+    "content": "# 1. Basiskennis en definities — Drone-techniek"
+  },
+  {
+    "id": "01_basiskennis_002",
+    "title": "Doel",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "doel"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "compact",
+      "naslagdocument",
+      "begrippen",
+      "systeemonderdelen",
+      "kernconcepten",
+      "drone-techniek"
+    ],
+    "content": "Compact naslagdocument voor begrippen, systeemonderdelen en kernconcepten in drone-techniek."
+  },
+  {
+    "id": "01_basiskennis_003",
+    "title": "Gebruik door een Teams-assistent",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "gebruik",
+      "teams-assistent"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "dit",
+      "document",
+      "vragen",
+      "wat",
+      "esc",
+      "verschil",
+      "tussen",
+      "stabiliseren",
+      "positioneren",
+      "betekent",
+      "failsafe"
+    ],
+    "content": "Gebruik dit document voor vragen als:\n- “Wat is een ESC?”\n- “Wat is het verschil tussen stabiliseren en positioneren?”\n- “Wat betekent failsafe of RTL?”\n- “Wat is het verschil tussen SIL en HIL?”"
+  },
+  {
+    "id": "01_basiskennis_004",
+    "title": "Afbakening",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "afbakening"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "dit",
+      "document",
+      "legt",
+      "uit",
+      "wat",
+      "iets",
+      "bouwstappen",
+      "checklists",
+      "zie",
+      "onderwijsformats",
+      "faq",
+      "voorbeeldantwoorden"
+    ],
+    "content": "Dit document legt uit **wat iets is**.  \nVoor **bouwstappen en checklists**: zie document 2.  \nVoor **onderwijsformats**: zie document 3.  \nVoor **FAQ’s en voorbeeldantwoorden**: zie document 4.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_005",
+    "title": "1. Systeembeeld van een multicopter",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "systeembeeld",
+      "multicopter"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "multicopter",
+      "luchtvaartuig",
+      "drie",
+      "meer",
+      "aangedreven",
+      "rotoren",
+      "meest",
+      "gebruikte",
+      "vorm",
+      "quadcopter",
+      "systeem",
+      "bestaat"
+    ],
+    "content": "Een multicopter is een luchtvaartuig met drie of meer aangedreven rotoren. De meest gebruikte vorm is de quadcopter. Het systeem bestaat meestal uit:\n1. **Airframe** — frame, armen, landingsgestel, montagepunten.\n2. **Propulsiesysteem** — motoren, propellers, ESC’s en accu.\n3. **Besturing** — flight controller/autopilot, sensoren, firmware.\n4. **Mens-machine-interface** — zender/ontvanger, ground control station, telemetrie.\n5. **Missielast** — camera, meetapparatuur, grijper of andere payload.\n\nEen drone is in de praktijk pas bruikbaar als deze vijf delen logisch samenwerken.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_006",
+    "title": "2.1 Airframe",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "airframe"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "airframe",
+      "dragende",
+      "mechanische",
+      "deel",
+      "drone",
+      "belangrijke",
+      "eigenschappen",
+      "stijf",
+      "genoeg",
+      "trillingen",
+      "beperken",
+      "licht"
+    ],
+    "content": "**Airframe**: het dragende mechanische deel van de drone.  \nBelangrijke eigenschappen:\n- stijf genoeg om trillingen te beperken;\n- licht genoeg om efficiënt te vliegen;\n- groot genoeg voor propellers, elektronica en payload;\n- robuust genoeg voor veilig testen."
+  },
+  {
+    "id": "01_basiskennis_007",
+    "title": "2.2 Propeller",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "propeller"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "propeller",
+      "draaivleugel",
+      "die",
+      "lucht",
+      "versnelt",
+      "stuwkracht",
+      "opwekt",
+      "belangrijke",
+      "begrippen",
+      "diameter",
+      "totale",
+      "maat"
+    ],
+    "content": "**Propeller**: draaivleugel die lucht versnelt en zo stuwkracht opwekt.  \nBelangrijke begrippen:\n- **diameter**: totale maat van tip tot tip;\n- **pitch**: theoretische verplaatsing per omwenteling;\n- **CW/CCW**: rechts- of linksdraaiende propeller;\n- **balans**: onbalans geeft trillingen, slechtere sensordata en extra slijtage."
+  },
+  {
+    "id": "01_basiskennis_008",
+    "title": "2.3 Motor",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "motor"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "brushless",
+      "motor",
+      "elektromotor",
+      "propelleraandrijving",
+      "belangrijke",
+      "begrippen",
+      "kv-waarde",
+      "globale",
+      "maat",
+      "toerental",
+      "per",
+      "volt"
+    ],
+    "content": "**Brushless motor**: elektromotor voor propelleraandrijving.  \nBelangrijke begrippen:\n- **KV-waarde**: globale maat voor toerental per volt zonder belasting;\n- **maximale continue stroom**: stroom die de motor veilig kan verdragen;\n- **koppel**: draaikracht van de motor;\n- **temperatuurreserve**: praktische marge om oververhitting te voorkomen."
+  },
+  {
+    "id": "01_basiskennis_009",
+    "title": "2.4 ESC",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "esc"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "esc",
+      "electronic",
+      "speed",
+      "controller",
+      "regelaar",
+      "tussen",
+      "accu",
+      "flight",
+      "motor",
+      "taken",
+      "zet",
+      "stuursignalen"
+    ],
+    "content": "**ESC (Electronic Speed Controller)**: regelaar tussen accu, flight controller en motor.  \nTaken:\n- zet stuursignalen om in motoraansturing;\n- levert drie-fase aandrijving aan de motor;\n- kan extra functies hebben zoals telemetry, remmen of protocolondersteuning."
+  },
+  {
+    "id": "01_basiskennis_010",
+    "title": "2.5 Accu",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "accu"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "lipo-accu",
+      "veelgebruikte",
+      "energiebron",
+      "multicopters",
+      "belangrijke",
+      "begrippen",
+      "s-aantal",
+      "aantal",
+      "cellen",
+      "serie",
+      "bepaalt",
+      "nominale"
+    ],
+    "content": "**LiPo-accu**: veelgebruikte energiebron voor multicopters.  \nBelangrijke begrippen:\n- **S-aantal**: aantal cellen in serie, bepaalt de nominale spanning;\n- **capaciteit (mAh)**: opgeslagen lading;\n- **C-rate**: maat voor maximale ontlaadsnelheid;\n- **spanningszak**: spanningsdaling onder belasting;\n- **opslagspanning**: veilige spanning voor bewaren."
+  },
+  {
+    "id": "01_basiskennis_011",
+    "title": "2.6 Flight controller / autopilot",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "flight",
+      "controller",
+      "autopilot"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "flight",
+      "controller",
+      "rekeneenheid",
+      "die",
+      "sensordata",
+      "verwerkt",
+      "stuurcommando",
+      "motoren",
+      "stuurt",
+      "autopilot",
+      "plus",
+      "firmwarelogica"
+    ],
+    "content": "**Flight controller**: rekeneenheid die sensordata verwerkt en stuurcommando’s naar motoren stuurt.  \n**Autopilot**: flight controller plus firmwarelogica voor stabilisatie, navigatie en failsafe-gedrag."
+  },
+  {
+    "id": "01_basiskennis_012",
+    "title": "2.7 Sensoren",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "sensoren"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "veelgebruikte",
+      "sensoren",
+      "imu",
+      "combinatie",
+      "gyroscoop",
+      "versnellingsmeter",
+      "magnetometer",
+      "richtingsinformatie",
+      "barometer",
+      "hoogte-inschatting",
+      "via",
+      "luchtdruk"
+    ],
+    "content": "Veelgebruikte sensoren:\n- **IMU**: combinatie van gyroscoop en versnellingsmeter;\n- **magnetometer**: richtingsinformatie;\n- **barometer**: hoogte-inschatting via luchtdruk;\n- **GPS/GNSS**: positie, snelheid en tijd;\n- **afstandssensor / vision sensor**: lokale hoogte- of positieondersteuning."
+  },
+  {
+    "id": "01_basiskennis_013",
+    "title": "2.8 RC-systeem",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "rc-systeem"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "rc-zender",
+      "handzender",
+      "piloot",
+      "rc-ontvanger",
+      "ontvangt",
+      "signalen",
+      "geeft",
+      "deze",
+      "aan",
+      "flight",
+      "controller",
+      "doel"
+    ],
+    "content": "**RC-zender**: handzender van de piloot.  \n**RC-ontvanger**: ontvangt signalen en geeft deze door aan de flight controller.  \nDoel: directe handmatige input of modekeuze."
+  },
+  {
+    "id": "01_basiskennis_014",
+    "title": "2.9 GCS en telemetrie",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "gcs",
+      "telemetrie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "ground",
+      "control",
+      "station",
+      "gcs",
+      "software",
+      "configuratie",
+      "monitoring",
+      "mission",
+      "management",
+      "telemetrie",
+      "draadloze",
+      "datalink"
+    ],
+    "content": "**Ground Control Station (GCS)**: software voor configuratie, monitoring en mission management.  \n**Telemetrie**: draadloze datalink tussen drone en grondstation."
+  },
+  {
+    "id": "01_basiskennis_015",
+    "title": "2.10 Payload",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "payload"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "payload",
+      "nuttige",
+      "last",
+      "die",
+      "nodig",
+      "vliegen",
+      "maar",
+      "wel",
+      "taak",
+      "voorbeelden",
+      "camera",
+      "multisensor"
+    ],
+    "content": "**Payload**: de nuttige last die niet nodig is om te vliegen, maar wel voor de taak.  \nVoorbeelden: camera, multisensor, luidspreker, pick-up mechanisme, meetinstrument.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_016",
+    "title": "3.1 Stuwkracht en momenten",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "stuwkracht",
+      "momenten"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "multicopter",
+      "bestuurt",
+      "zichzelf",
+      "verschillen",
+      "motortoerental",
+      "daarmee",
+      "ontstaan",
+      "totale",
+      "stuwkracht",
+      "op-",
+      "neergaan",
+      "rolmoment"
+    ],
+    "content": "Een multicopter bestuurt zichzelf door verschillen in motortoerental. Daarmee ontstaan:\n- **totale stuwkracht** voor op- en neergaan;\n- **rolmoment** voor links/rechts kantelen;\n- **pitchmoment** voor voorover/achterover kantelen;\n- **yawmoment** voor draaien om de verticale as."
+  },
+  {
+    "id": "01_basiskennis_017",
+    "title": "3.2 Hover",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "hover"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "hover",
+      "stationair",
+      "vliegen",
+      "netto",
+      "verticale",
+      "kracht",
+      "ongeveer",
+      "nul",
+      "praktisch",
+      "wil",
+      "dicht",
+      "vol"
+    ],
+    "content": "**Hover**: stationair vliegen met netto verticale kracht ongeveer nul.  \nPraktisch wil je hover niet te dicht bij vol gas hebben. Een werkbare reserve is nodig voor:\n- correcties bij wind;\n- manoeuvres;\n- veilige regeling."
+  },
+  {
+    "id": "01_basiskennis_018",
+    "title": "3.3 Attitude, rate en positie",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "attitude",
+      "rate",
+      "positie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "rate",
+      "control",
+      "regelt",
+      "draaisnelheid",
+      "attitude",
+      "hoekstand",
+      "altitude",
+      "hoogte",
+      "position",
+      "horizontale",
+      "positie",
+      "navigation"
+    ],
+    "content": "- **Rate control**: regelt draaisnelheid.\n- **Attitude control**: regelt hoekstand.\n- **Altitude control**: regelt hoogte.\n- **Position control**: regelt horizontale positie.\n- **Navigation / guidance**: bepaalt waar de drone heen moet."
+  },
+  {
+    "id": "01_basiskennis_019",
+    "title": "3.4 Control loop",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "control",
+      "loop"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "control",
+      "loop",
+      "meet",
+      "toestand",
+      "vergelijkt",
+      "die",
+      "gewenste",
+      "waarde",
+      "corrigeert",
+      "actuatoren",
+      "typisch",
+      "gelaagd"
+    ],
+    "content": "Een **control loop** meet de toestand, vergelijkt die met een gewenste waarde en corrigeert de actuatoren.  \nTypisch gelaagd:\n1. snelle binnenlus: rates;\n2. middenlus: attitude;\n3. buitenlus: hoogte of positie."
+  },
+  {
+    "id": "01_basiskennis_020",
+    "title": "3.5 Dead zone",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "dead",
+      "zone"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "dead",
+      "zone",
+      "gebied",
+      "rond",
+      "middenstand",
+      "stick",
+      "waarin",
+      "kleine",
+      "invoer",
+      "direct",
+      "tot",
+      "commandoverandering"
+    ],
+    "content": "**Dead zone**: gebied rond de middenstand van een stick waarin kleine invoer niet direct tot commandoverandering leidt. Handig voor stabiel hoveren.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_022",
+    "title": "4.2 State estimation",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "state",
+      "estimation"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "state",
+      "estimation",
+      "schatten",
+      "houding",
+      "snelheid",
+      "positie",
+      "uit",
+      "meerdere",
+      "sensoren",
+      "waarom",
+      "nodig",
+      "ruwe"
+    ],
+    "content": "**State estimation**: schatten van houding, snelheid en positie uit meerdere sensoren.  \nWaarom nodig:\n- ruwe sensoren zijn ruisachtig;\n- geen enkele sensor vertelt het hele verhaal;\n- regelsystemen hebben stabiele toestandsinformatie nodig."
+  },
+  {
+    "id": "01_basiskennis_023",
+    "title": "4.3 Filter",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "filter"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "complementary",
+      "filter",
+      "combineert",
+      "snel",
+      "maar",
+      "driftgevoelig",
+      "gedrag",
+      "langzamer",
+      "stabieler",
+      "kalman-filter",
+      "ekf",
+      "modelgebaseerde"
+    ],
+    "content": "**Complementary filter**: combineert snel maar driftgevoelig gedrag met langzamer maar stabieler gedrag.  \n**Kalman-filter / EKF**: modelgebaseerde schatter die met ruis en onzekerheid omgaat."
+  },
+  {
+    "id": "01_basiskennis_024",
+    "title": "4.4 Tuning",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "tuning"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "tuning",
+      "afregelen",
+      "regelparameters",
+      "zodat",
+      "systeem",
+      "snel",
+      "stabiel",
+      "veilig",
+      "reageert",
+      "agressief",
+      "afgestemd",
+      "geeft"
+    ],
+    "content": "**Tuning**: het afregelen van regelparameters zodat het systeem snel, stabiel en veilig reageert.  \nTe agressief afgestemd geeft vaak oscillaties; te traag afgestemd geeft slappe of onnauwkeurige besturing.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_025",
+    "title": "5.1 Handmatig, semi-autonoom en autonoom",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "handmatig",
+      "semi-autonoom",
+      "autonoom"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "handmatig",
+      "piloot",
+      "stuurt",
+      "direct",
+      "semi-autonoom",
+      "geeft",
+      "commando",
+      "autopilot",
+      "stabiliseert",
+      "houdt",
+      "hoogte",
+      "positie"
+    ],
+    "content": "- **Handmatig**: piloot stuurt direct.\n- **Semi-autonoom**: piloot geeft commando’s, autopilot stabiliseert of houdt hoogte/positie vast.\n- **Autonoom**: systeem volgt zelf een taak of missie."
+  },
+  {
+    "id": "01_basiskennis_026",
+    "title": "5.2 Veelgebruikte vliegmodi",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "veelgebruikte",
+      "vliegmodi"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "stabilize",
+      "attitudehulp",
+      "positie",
+      "automatisch",
+      "vast",
+      "altitude",
+      "hold",
+      "althold",
+      "hoogte",
+      "wordt",
+      "actief",
+      "bewaakt"
+    ],
+    "content": "- **Stabilize**: attitudehulp, positie niet automatisch vast.\n- **Altitude Hold / AltHold**: hoogte wordt actief bewaakt.\n- **Loiter / Position Hold**: hoogte en positie blijven ongeveer behouden.\n- **RTL (Return to Launch)**: terug naar home-positie en daarna landen of wachten.\n- **Auto Land**: automatische landing.\n- **Mission / Auto**: volgt vooraf ingestelde waypoints of logica."
+  },
+  {
+    "id": "01_basiskennis_027",
+    "title": "5.3 Home-positie",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "home-positie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "home",
+      "referentiepunt",
+      "rtl",
+      "veiligheidslogica",
+      "meestal",
+      "vastgelegd",
+      "arm",
+      "gps-lock",
+      "---"
+    ],
+    "content": "**Home**: referentiepunt voor RTL en veiligheidslogica. Meestal vastgelegd bij arm of bij GPS-lock.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_028",
+    "title": "6.1 Arm en disarm",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "arm",
+      "disarm"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "armen",
+      "motorsysteem",
+      "vrijgeven",
+      "disarmen",
+      "veilig",
+      "uitschakelen"
+    ],
+    "content": "- **Armen**: motorsysteem vrijgeven.\n- **Disarmen**: motorsysteem veilig uitschakelen."
+  },
+  {
+    "id": "01_basiskennis_029",
+    "title": "6.2 Failsafe",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "failsafe"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "failsafe",
+      "vooraf",
+      "gedefinieerde",
+      "reactie",
+      "fout",
+      "verlies",
+      "informatie",
+      "voorbeelden",
+      "rc-link",
+      "gps-storing",
+      "kompasfout",
+      "accuspanning"
+    ],
+    "content": "**Failsafe**: vooraf gedefinieerde reactie op een fout of verlies van informatie.  \nVoorbeelden:\n- verlies van RC-link;\n- GPS-storing;\n- kompasfout;\n- accuspanning te laag;\n- propulsieafwijking."
+  },
+  {
+    "id": "01_basiskennis_030",
+    "title": "6.3 Geofence",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "geofence"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "geofence",
+      "virtuele",
+      "grens",
+      "waarbinnen",
+      "voertuig",
+      "moet",
+      "blijven"
+    ],
+    "content": "**Geofence**: virtuele grens waarbinnen het voertuig moet blijven."
+  },
+  {
+    "id": "01_basiskennis_032",
+    "title": "7.1 SIL",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "sil"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "software-in-the-loop",
+      "sil",
+      "controller",
+      "testen",
+      "simulatie",
+      "zonder",
+      "echte",
+      "flight",
+      "controllerhardware"
+    ],
+    "content": "**Software-in-the-Loop (SIL)**: controller testen in simulatie zonder echte flight controllerhardware."
+  },
+  {
+    "id": "01_basiskennis_033",
+    "title": "7.2 HIL",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "hil"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "hardware-in-the-loop",
+      "hil",
+      "echte",
+      "flight",
+      "controller",
+      "draait",
+      "mee",
+      "maar",
+      "omgeving",
+      "nog",
+      "gesimuleerd"
+    ],
+    "content": "**Hardware-in-the-Loop (HIL)**: echte flight controller draait mee, maar de omgeving is nog gesimuleerd."
+  },
+  {
+    "id": "01_basiskennis_034",
+    "title": "7.3 Bench test",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "bench",
+      "test"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "bench",
+      "test",
+      "statische",
+      "controle",
+      "werkbank",
+      "liefst",
+      "zonder",
+      "propellers"
+    ],
+    "content": "**Bench test**: statische controle op de werkbank, liefst zonder propellers."
+  },
+  {
+    "id": "01_basiskennis_035",
+    "title": "7.4 Indoor test",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "indoor",
+      "test"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gecontroleerde",
+      "test",
+      "extra",
+      "veiligheidsmaatregelen",
+      "lage",
+      "energie",
+      "beperkte",
+      "ruimte"
+    ],
+    "content": "Gecontroleerde test met extra veiligheidsmaatregelen, lage energie en beperkte ruimte."
+  },
+  {
+    "id": "01_basiskennis_036",
+    "title": "7.5 Flight test",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "flight",
+      "test"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "buitenproef",
+      "realistische",
+      "binnentest",
+      "onder",
+      "operationele",
+      "condities",
+      "---"
+    ],
+    "content": "Buitenproef of realistische binnentest onder operationele condities.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_037",
+    "title": "8.1 Endurance",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "endurance"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "endurance",
+      "vliegtijd",
+      "onder",
+      "bepaalde",
+      "belasting",
+      "vluchtconditie"
+    ],
+    "content": "**Endurance**: vliegtijd onder een bepaalde belasting en vluchtconditie."
+  },
+  {
+    "id": "01_basiskennis_038",
+    "title": "8.2 Payload",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "payload"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "payload",
+      "capacity",
+      "extra",
+      "massa",
+      "die",
+      "nog",
+      "veilig",
+      "kan",
+      "worden",
+      "meegenomen"
+    ],
+    "content": "**Payload capacity**: extra massa die nog veilig kan worden meegenomen."
+  },
+  {
+    "id": "01_basiskennis_039",
+    "title": "8.3 Throttle reserve",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "throttle",
+      "reserve"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "throttle",
+      "reserve",
+      "beschikbare",
+      "vermogensmarge",
+      "boven",
+      "hover"
+    ],
+    "content": "**Throttle reserve**: beschikbare vermogensmarge boven hover."
+  },
+  {
+    "id": "01_basiskennis_040",
+    "title": "8.4 Vibration",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "vibration"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "trillingen",
+      "mechanische",
+      "verstoringen",
+      "die",
+      "sensoren",
+      "beeldkwaliteit",
+      "verslechteren"
+    ],
+    "content": "**Trillingen**: mechanische verstoringen die sensoren en beeldkwaliteit verslechteren."
+  },
+  {
+    "id": "01_basiskennis_041",
+    "title": "8.5 CG",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [],
+    "safety_level": "normal",
+    "keywords": [
+      "center",
+      "gravity",
+      "massamiddelpunt",
+      "verkeerde",
+      "maakt",
+      "regelen",
+      "moeilijker",
+      "inefficiënter",
+      "---"
+    ],
+    "content": "**Center of Gravity (CG)**: massamiddelpunt. Een verkeerde CG maakt regelen moeilijker en inefficiënter.\n\n---"
+  },
+  {
+    "id": "01_basiskennis_042",
+    "title": "9. Afkortingenlijst",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "afkortingenlijst"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "afkorting",
+      "betekenis",
+      "---",
+      "automatic",
+      "control",
+      "bec",
+      "battery",
+      "eliminator",
+      "circuit",
+      "spanningsregelvoorziening",
+      "center",
+      "gravity"
+    ],
+    "content": "| Afkorting | Betekenis |\n|---|---|\n| AC | Automatic Control |\n| BEC | Battery Eliminator Circuit / spanningsregelvoorziening |\n| CG | Center of Gravity |\n| ESC | Electronic Speed Controller |\n| EKF | Extended Kalman Filter |\n| GCS | Ground Control Station |\n| GNSS | Global Navigation Satellite System |\n| GPS | Global Positioning System |\n| HIL | Hardware-in-the-Loop |\n| IMU | Inertial Measurement Unit |\n| PID | Proportional-Integral-Derivative |\n| PWM | Pulsbreedtemodulatie / stuursignaal |\n| RC | Radio Control |\n| RTL | Return to Launch |\n| SAC | Semi-autonomous Control |\n| SIL | Software-in-the-Loop |\n| UAS/UAV | Unmanned Aircraft System / Vehicle |\n\n---"
+  },
+  {
+    "id": "01_basiskennis_044",
+    "title": "Bronbasis",
+    "document": "01_basiskennis",
+    "type": "definition",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "bronbasis"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebaseerd",
+      "multicopter",
+      "ontwerp-",
+      "simulatie-",
+      "hil-",
+      "regel-",
+      "failsafe-materiaal",
+      "uit",
+      "aangeleverde",
+      "bronset",
+      "aangevuld",
+      "algemene"
+    ],
+    "content": "Gebaseerd op multicopter ontwerp-, simulatie-, HIL-, regel- en failsafe-materiaal uit de aangeleverde bronset, aangevuld met algemene drone-techniekkennis."
+  }
+]

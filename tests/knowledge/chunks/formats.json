@@ -1,0 +1,979 @@
+[
+  {
+    "id": "03_onderwijsformats_001",
+    "title": "Inleiding",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "inleiding"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "onderwijsformats",
+      "pve",
+      "user",
+      "stories",
+      "logboeken",
+      "task",
+      "cards"
+    ],
+    "content": "# 3. Onderwijsformats — PvE, user stories, logboeken en task cards"
+  },
+  {
+    "id": "03_onderwijsformats_002",
+    "title": "Doel",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "doel"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "compact",
+      "formatdocument",
+      "onderwijs",
+      "practica",
+      "projecten",
+      "toetsing",
+      "drone-techniek"
+    ],
+    "content": "Compact formatdocument voor onderwijs, practica, projecten en toetsing in drone-techniek."
+  },
+  {
+    "id": "03_onderwijsformats_003",
+    "title": "Gebruik door een Teams-assistent",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "gebruik",
+      "teams-assistent"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "dit",
+      "document",
+      "vragen",
+      "heb",
+      "pve-format",
+      "droneproject",
+      "maak",
+      "user",
+      "story",
+      "hoogtehoudfunctie",
+      "hoe"
+    ],
+    "content": "Gebruik dit document voor vragen als:\n- “Heb je een PvE-format voor een droneproject?”\n- “Maak een user story voor een hoogtehoudfunctie.”\n- “Hoe ziet een logboek eruit?”\n- “Kun je een task card voor sensorcalibratie geven?”"
+  },
+  {
+    "id": "03_onderwijsformats_004",
+    "title": "Afbakening",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "afbakening"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "dit",
+      "document",
+      "bevat",
+      "formats",
+      "invulstructuren",
+      "theorie",
+      "definities",
+      "zie",
+      "bouw-",
+      "onderhoudsstappen",
+      "veelgestelde",
+      "vragen"
+    ],
+    "content": "Dit document bevat **formats en invulstructuren**.  \nVoor **theorie en definities**: zie document 1.  \nVoor **bouw- en onderhoudsstappen**: zie document 2.  \nVoor **veelgestelde vragen en voorbeeldantwoorden**: zie document 4.\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_005",
+    "title": "1. Ontwerprichtlijn voor onderwijs",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "ontwerprichtlijn",
+      "onderwijs"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "drone-opdrachten",
+      "drie",
+      "niveaus",
+      "basis",
+      "herhalen",
+      "uitvoeren",
+      "waarnemen",
+      "analyse",
+      "aanpassen",
+      "meten",
+      "vergelijken"
+    ],
+    "content": "Gebruik bij drone-opdrachten drie niveaus:\n1. **Basis** — herhalen, uitvoeren, waarnemen\n2. **Analyse** — aanpassen, meten, vergelijken\n3. **Ontwerp** — zelf specificeren, bouwen, valideren\n\nDit sluit goed aan op dronepraktijk: eerst begrijpen, dan wijzigen, dan ontwerpen.\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_006",
+    "title": "2.1 Sjabloon",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "sjabloon"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "projecttitel",
+      "versie",
+      "team",
+      "student",
+      "datum"
+    ],
+    "content": "**Projecttitel**  \n**Versie**  \n**Team / student**  \n**Datum**"
+  },
+  {
+    "id": "03_onderwijsformats_007",
+    "title": "A. Doel van het systeem",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "doel",
+      "systeem"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "welke",
+      "taak",
+      "moet",
+      "drone",
+      "uitvoeren",
+      "gebruiker",
+      "situatie",
+      "waarom",
+      "dit",
+      "project",
+      "relevant"
+    ],
+    "content": "- Welke taak moet de drone uitvoeren?\n- Voor welke gebruiker of situatie?\n- Waarom is dit project relevant?"
+  },
+  {
+    "id": "03_onderwijsformats_008",
+    "title": "B. Functionele eisen",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "functionele",
+      "eisen"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "drone",
+      "moet",
+      "operator",
+      "systeem",
+      "kunnen",
+      "schakelen",
+      "tussen"
+    ],
+    "content": "- De drone moet …\n- De operator moet …\n- Het systeem moet kunnen schakelen tussen …"
+  },
+  {
+    "id": "03_onderwijsformats_009",
+    "title": "C. Prestatie-eisen",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "prestatie-eisen"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "maximale",
+      "massa",
+      "minimale",
+      "vliegtijd",
+      "payload",
+      "afmeting",
+      "gewenste",
+      "nauwkeurigheid",
+      "reactietijd",
+      "settling",
+      "windsituatie"
+    ],
+    "content": "- Maximale massa:\n- Minimale vliegtijd:\n- Minimale payload:\n- Maximale afmeting:\n- Gewenste nauwkeurigheid:\n- Reactietijd / settling:\n- Maximale windsituatie:"
+  },
+  {
+    "id": "03_onderwijsformats_011",
+    "title": "E. Technische randvoorwaarden",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "technische",
+      "randvoorwaarden"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "flight",
+      "controller",
+      "firmware",
+      "sensoren",
+      "simulatie-eis",
+      "logverplichting",
+      "telemetrie",
+      "nee"
+    ],
+    "content": "- Flight controller / firmware:\n- Sensoren:\n- Simulatie-eis:\n- Logverplichting:\n- Telemetrie ja/nee:"
+  },
+  {
+    "id": "03_onderwijsformats_012",
+    "title": "F. Onderwijs- en oplevereisen",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "onderwijs-",
+      "oplevereisen"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "leveren",
+      "documenten",
+      "demonstratie",
+      "broncode",
+      "model",
+      "presentatie",
+      "reflectie"
+    ],
+    "content": "- Op te leveren documenten:\n- Demonstratie:\n- Broncode / model:\n- Presentatie:\n- Reflectie:"
+  },
+  {
+    "id": "03_onderwijsformats_013",
+    "title": "G. Acceptatiecriteria",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "acceptatiecriteria"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "systeem",
+      "acceptabel",
+      "test",
+      "geslaagd",
+      "wanneer",
+      "veiligheidscheck",
+      "voldaan"
+    ],
+    "content": "- Het systeem is acceptabel als …\n- De test is geslaagd wanneer …\n- De veiligheidscheck is voldaan wanneer …"
+  },
+  {
+    "id": "03_onderwijsformats_014",
+    "title": "2.2 Voorbeeld-PvE",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld-pve"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "project",
+      "quadcopter",
+      "hoogtehoudfunctie",
+      "practicum",
+      "doel",
+      "stabiel",
+      "hoveren",
+      "één",
+      "hoogte",
+      "gedurende",
+      "seconden",
+      "prestatie"
+    ],
+    "content": "**Project**: Quadcopter met hoogtehoudfunctie voor practicum  \n**Doel**: stabiel hoveren op één hoogte gedurende 20 seconden  \n**Prestatie**: vliegtijd minimaal 8 minuten, hover stabiel binnen ±0,5 m  \n**Veiligheid**: props pas monteren na bench test, failsafe = autoland  \n**Acceptatie**: indoor test slaagt in 3 opeenvolgende pogingen\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_015",
+    "title": "3.1 Sjabloon",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "sjabloon"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "rol",
+      "wil",
+      "functie",
+      "gedrag",
+      "zodat",
+      "waarde",
+      "doel"
+    ],
+    "content": "**Als** [rol]  \n**wil ik** [functie of gedrag]  \n**zodat** [waarde of doel]."
+  },
+  {
+    "id": "03_onderwijsformats_016",
+    "title": "Acceptatiecriteria",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "acceptatiecriteria"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gegeven",
+      "wanneer"
+    ],
+    "content": "- Gegeven …\n- Wanneer …\n- Dan …"
+  },
+  {
+    "id": "03_onderwijsformats_017",
+    "title": "Technische notities",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "technische",
+      "notities"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "sensoren",
+      "modi",
+      "failsafes",
+      "logdata",
+      "testconditie"
+    ],
+    "content": "- Sensoren:\n- Modi:\n- Failsafes:\n- Logdata:\n- Testconditie:"
+  },
+  {
+    "id": "03_onderwijsformats_018",
+    "title": "Voorbeeld 1 — student",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student"
+    ],
+    "topic": [
+      "voorbeeld",
+      "student"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "student",
+      "drone-techniek",
+      "wil",
+      "duidelijke",
+      "pre-flight",
+      "checklist",
+      "zodat",
+      "fouten",
+      "vóór",
+      "opstijgen",
+      "vind",
+      "acceptatiecriteria"
+    ],
+    "content": "Als **student drone-techniek**  \nwil ik **een duidelijke pre-flight checklist**  \nzodat **ik fouten vóór het opstijgen vind**.\n\nAcceptatiecriteria:\n- Gegeven een klaarstaande drone,\n- wanneer de student de checklist stap voor stap doorloopt,\n- dan worden accu, props, mode en failsafe aantoonbaar gecontroleerd."
+  },
+  {
+    "id": "03_onderwijsformats_019",
+    "title": "Voorbeeld 2 — operator",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld",
+      "operator"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "operator",
+      "wil",
+      "één",
+      "schakelaar",
+      "kunnen",
+      "wisselen",
+      "tussen",
+      "stabilize",
+      "altitude",
+      "hold",
+      "loiter",
+      "zodat"
+    ],
+    "content": "Als **operator**  \nwil ik **met één schakelaar kunnen wisselen tussen stabilize, altitude hold en loiter**  \nzodat **ik veilig kan opschalen van handmatig naar semi-autonoom**."
+  },
+  {
+    "id": "03_onderwijsformats_020",
+    "title": "Voorbeeld 3 — docent",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "docent"
+    ],
+    "topic": [
+      "voorbeeld",
+      "docent"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "docent",
+      "wil",
+      "verschillende",
+      "ontwerpopgaven",
+      "per",
+      "student",
+      "kunnen",
+      "uitdelen",
+      "zodat",
+      "studenten",
+      "zelfstandig",
+      "ontwerpen"
+    ],
+    "content": "Als **docent**  \nwil ik **verschillende ontwerpopgaven per student kunnen uitdelen**  \nzodat **studenten zelfstandig ontwerpen en niet allemaal hetzelfde inleveren**.\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_021",
+    "title": "4. Format voor acceptance criteria",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "format",
+      "acceptance",
+      "criteria"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "maximaal",
+      "criteria",
+      "per",
+      "taak",
+      "criterium",
+      "meetwijze",
+      "geslaagd",
+      "wanneer",
+      "---",
+      "ac1",
+      "drone"
+    ],
+    "content": "Gebruik maximaal 5–7 criteria per taak.\n\n| Nr | Criterium | Meetwijze | Geslaagd wanneer |\n|---|---|---|---|\n| AC1 | Drone start correct op | Bench test | geen kritieke foutmelding |\n| AC2 | RC-input klopt | kanaaltest | alle assen correct |\n| AC3 | Hoogtehold werkt | indoor test | hoogte blijft binnen band |\n| AC4 | Logging draait | logcontrole | bestand aanwezig en leesbaar |\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_022",
+    "title": "5.1 Kort format per sessie",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "kort",
+      "format",
+      "per",
+      "sessie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "datum",
+      "team",
+      "student",
+      "toestel",
+      "configuratie",
+      "doel",
+      "sessie",
+      "uitgevoerde",
+      "stappen",
+      "waarnemingen",
+      "problemen",
+      "oorzaken"
+    ],
+    "content": "**Datum**  \n**Team / student**  \n**Toestel / configuratie**  \n**Doel van de sessie**  \n**Uitgevoerde stappen**  \n**Waarnemingen**  \n**Problemen**  \n**Oorzaken (vermoed)**  \n**Acties voor volgende keer**  \n**Veiligheidsopmerkingen**"
+  },
+  {
+    "id": "03_onderwijsformats_023",
+    "title": "5.2 Aanbevolen invulregels",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "aanbevolen",
+      "invulregels"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "noteer",
+      "feiten",
+      "vóór",
+      "interpretaties",
+      "gebruik",
+      "meetwaarden",
+      "waar",
+      "mogelijk",
+      "schrijf",
+      "mislukte",
+      "tests",
+      "wat"
+    ],
+    "content": "- Noteer feiten vóór interpretaties.\n- Gebruik meetwaarden waar mogelijk.\n- Schrijf ook mislukte tests op.\n- Noteer wat is gewijzigd sinds de vorige sessie.\n- Sluit af met één concrete volgende stap."
+  },
+  {
+    "id": "03_onderwijsformats_024",
+    "title": "5.3 Voorbeeld logboekitem",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld",
+      "logboekitem"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "doel",
+      "hoogtehold",
+      "testen",
+      "nieuwe",
+      "pid-instelling",
+      "uitgevoerde",
+      "stappen",
+      "sensorcheck",
+      "rc-check",
+      "indoor",
+      "hovertest",
+      "waarnemingen"
+    ],
+    "content": "**Doel**: hoogtehold testen na nieuwe PID-instelling  \n**Uitgevoerde stappen**: sensorcheck, RC-check, indoor hovertest  \n**Waarnemingen**: hover stabieler dan vorige sessie, maar nog lichte verticale pompbeweging  \n**Problemen**: oscillatie bij snelle throttlewissel  \n**Volgende stap**: kleine verlaging van P en herhaal test  \n**Veiligheid**: props na test direct verwijderd voor bench-analyse\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_025",
+    "title": "6. Logboekformat docent",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "docent"
+    ],
+    "topic": [
+      "logboekformat",
+      "docent"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "klas",
+      "groep",
+      "onderdeel",
+      "les",
+      "leerdoel",
+      "wat",
+      "ging",
+      "goed",
+      "veelvoorkomende",
+      "fouten",
+      "veiligheidsmomenten",
+      "beslissing"
+    ],
+    "content": "**Klas / groep**  \n**Onderdeel / les**  \n**Leerdoel**  \n**Wat ging goed**  \n**Veelvoorkomende fouten**  \n**Veiligheidsmomenten**  \n**Beslissing voor volgende les**  \n**Benodigde materialen**\n\nDit helpt bij herhaalbaarheid en overdracht tussen docenten.\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_026",
+    "title": "7.1 Standaardsjabloon",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "standaardsjabloon"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "taaknaam",
+      "code",
+      "niveau",
+      "basis",
+      "analyse",
+      "ontwerp",
+      "duur",
+      "benodigdheden",
+      "veiligheidswaarschuwing",
+      "uit",
+      "voeren",
+      "stappen"
+    ],
+    "content": "**Taaknaam**  \n**Code**  \n**Niveau**: basis / analyse / ontwerp  \n**Duur**  \n**Benodigdheden**  \n**Veiligheidswaarschuwing**  \n**Uit te voeren stappen**  \n**Op te leveren bewijs**  \n**Beoordelingspunten**  \n**Stopcriterium**"
+  },
+  {
+    "id": "03_onderwijsformats_027",
+    "title": "7.2 Voorbeeld task card — sensorcalibratie",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld",
+      "task",
+      "card",
+      "sensorcalibratie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "taaknaam",
+      "imu-basiscontrole",
+      "calibratie",
+      "code",
+      "tc-sens-01",
+      "niveau",
+      "basis",
+      "duur",
+      "min",
+      "benodigdheden",
+      "flight",
+      "controller"
+    ],
+    "content": "**Taaknaam**: IMU-basiscontrole en calibratie  \n**Code**: TC-SENS-01  \n**Niveau**: basis  \n**Duur**: 20 min  \n**Benodigdheden**: flight controller, laptop, configuratiesoftware  \n**Veiligheid**: propellers verwijderd  \n**Stappen**:\n1. Verbind flight controller\n2. Controleer sensorstatus\n3. Voer accelerometercalibratie uit\n4. Sla instellingen op\n5. Controleer resultaat\n\n**Bewijs**:\n- screenshot sensorstatus\n- korte reflectie: wat was afwijkend?\n\n**Stopcriterium**:\n- onverklaarbare sensorfout;\n- instabiele voeding;\n- kalibratie mislukt."
+  },
+  {
+    "id": "03_onderwijsformats_028",
+    "title": "7.3 Voorbeeld task card — pre-flight",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld",
+      "task",
+      "card",
+      "pre-flight"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "taaknaam",
+      "pre-flight",
+      "inspectie",
+      "code",
+      "tc-ops-01",
+      "niveau",
+      "basis",
+      "duur",
+      "min",
+      "bewijs",
+      "afgetekende",
+      "checklist"
+    ],
+    "content": "**Taaknaam**: pre-flight inspectie  \n**Code**: TC-OPS-01  \n**Niveau**: basis  \n**Duur**: 10 min  \n**Bewijs**: afgetekende checklist + mondelinge toelichting\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_029",
+    "title": "8. Experimentkaart",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "experimentkaart"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "handig",
+      "practica",
+      "titel",
+      "experiment",
+      "onderzoeksvraag",
+      "hypothese",
+      "onafhankelijke",
+      "variabele",
+      "afhankelijke",
+      "meetmethode",
+      "veiligheidsmaatregelen",
+      "verwachte"
+    ],
+    "content": "Handig voor practica.\n\n**Titel experiment**  \n**Onderzoeksvraag**  \n**Hypothese**  \n**Onafhankelijke variabele**  \n**Afhankelijke variabele**  \n**Meetmethode**  \n**Veiligheidsmaatregelen**  \n**Verwachte uitkomst**  \n**Reflectie**"
+  },
+  {
+    "id": "03_onderwijsformats_030",
+    "title": "Voorbeeld",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "voorbeeld"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "onderzoeksvraag",
+      "wat",
+      "effect",
+      "extra",
+      "massa",
+      "hover",
+      "throttle",
+      "vliegtijd",
+      "---"
+    ],
+    "content": "Onderzoeksvraag: wat is het effect van extra massa op hover throttle en vliegtijd?\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_031",
+    "title": "9. Beoordelingsrubric compact",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "beoordelingsrubric",
+      "compact"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "aspect",
+      "onvoldoende",
+      "voldoende",
+      "goed",
+      "---",
+      "veilig",
+      "werken",
+      "checklists",
+      "genegeerd",
+      "basischecks",
+      "uitgevoerd",
+      "zelfstandig"
+    ],
+    "content": "| Aspect | Onvoldoende | Voldoende | Goed |\n|---|---|---|---|\n| Veilig werken | checklists genegeerd | basischecks uitgevoerd | zelfstandig en consequent veilig |\n| Technische uitvoering | veel fouten, geen diagnose | systeem werkt deels | werkt stabiel en reproduceerbaar |\n| Analyse | losse observaties | redelijke verklaring | meetgegevens, vergelijking en conclusies |\n| Documentatie | onvolledig | bruikbaar | helder, volledig en overdraagbaar |\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_032",
+    "title": "10. Lesvoorbereidingskaart voor docenten",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "docent"
+    ],
+    "topic": [
+      "lesvoorbereidingskaart",
+      "docenten"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "leerdoel",
+      "voorkennis",
+      "vereist",
+      "benodigd",
+      "materiaal",
+      "risico",
+      "demo",
+      "docent",
+      "zelfstandige",
+      "studenttaak",
+      "meet-",
+      "beoordelmoment"
+    ],
+    "content": "**Leerdoel**  \n**Voorkennis vereist**  \n**Benodigd materiaal**  \n**Risico’s**  \n**Demo door docent**  \n**Zelfstandige studenttaak**  \n**Meet-/beoordelmoment**  \n**Nazorg / huiswerk**\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_033",
+    "title": "11. Naamgevingsconventie voor bestanden",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "naamgevingsconventie",
+      "bestanden"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "aanbevolen",
+      "patroon",
+      "groep",
+      "onderwerp",
+      "versie",
+      "datum",
+      "voorbeelden",
+      "t2_preflight_v1_2026-04-03",
+      "g1_hoogtehold_logboek_v2_2026-04-03",
+      "d5_pve_multicopter_v1_2026-04-03",
+      "dit",
+      "maakt"
+    ],
+    "content": "Aanbevolen patroon:\n`[groep]_[onderwerp]_[versie]_[datum]`\n\nVoorbeelden:\n- `T2_preflight_v1_2026-04-03`\n- `G1_hoogtehold_logboek_v2_2026-04-03`\n- `D5_PvE_multicopter_v1_2026-04-03`\n\nDit maakt kennisbankbeheer en terugvinden eenvoudiger.\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_034",
+    "title": "12. Minimale set voor een compleet studentproject",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student"
+    ],
+    "topic": [
+      "minimale",
+      "set",
+      "compleet",
+      "studentproject"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "pve",
+      "minimaal",
+      "user",
+      "stories",
+      "task",
+      "cards",
+      "per",
+      "praktijksessie",
+      "logboek",
+      "sessie",
+      "acceptatiecriteria",
+      "eindreflectie"
+    ],
+    "content": "1. PvE\n2. minimaal 3 user stories\n3. task cards per praktijksessie\n4. logboek per sessie\n5. acceptatiecriteria\n6. eindreflectie met veiligheidsanalyse\n\n---"
+  },
+  {
+    "id": "03_onderwijsformats_036",
+    "title": "Bronbasis",
+    "document": "03_onderwijsformats",
+    "type": "format",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "bronbasis"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebaseerd",
+      "bronset",
+      "beschreven",
+      "experimentele",
+      "opbouw",
+      "basis",
+      "analyse",
+      "ontwerp",
+      "hil",
+      "sil-werkwijze",
+      "docentdifferentiatie",
+      "open"
+    ],
+    "content": "Gebaseerd op de in de bronset beschreven experimentele opbouw basis–analyse–ontwerp, HIL/SIL-werkwijze, docentdifferentiatie en open experimentvormen, aangevuld met praktische onderwijsontwerpervaring voor droneprojecten."
+  }
+]

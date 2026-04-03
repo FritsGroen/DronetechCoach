@@ -1,0 +1,1 @@
+[{"input":"Wat is een ESC?","expected_category":"definition"},{"input":"Geef de bench test checklist","expected_category":"procedure"},{"input":"Maak een PvE-format","expected_category":"format"},{"input":"Mijn drone armt niet","expected_category":"diagnosis"},{"input":"Na de crash kwam er rook uit","expected_category":"safety"}]

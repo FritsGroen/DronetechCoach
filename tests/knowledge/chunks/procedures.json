@@ -1,0 +1,971 @@
+[
+  {
+    "id": "01_basiskennis_021",
+    "title": "4.1 Kalibratie",
+    "document": "01_basiskennis",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "kalibratie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "kalibratie",
+      "meten",
+      "corrigeren",
+      "offsets",
+      "schaalfouten",
+      "richtingsfouten",
+      "sensoren",
+      "invoerapparatuur",
+      "voorbeelden",
+      "accelerometerkalibratie",
+      "kompascalibratie",
+      "rc-kalibratie"
+    ],
+    "content": "**Kalibratie**: het meten en corrigeren van offsets, schaalfouten of richtingsfouten van sensoren en invoerapparatuur.  \nVoorbeelden:\n- accelerometerkalibratie;\n- kompascalibratie;\n- RC-kalibratie;\n- ESC/motor-richtingcontrole."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_001",
+    "title": "Inleiding",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "inleiding"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "bouw",
+      "onderhoud",
+      "checklists",
+      "drone-techniek"
+    ],
+    "content": "# 2. Bouw, onderhoud en checklists — Drone-techniek"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_002",
+    "title": "Doel",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "doel"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "werkdocument",
+      "opbouw",
+      "configuratie",
+      "onderhoud",
+      "operationele",
+      "controles",
+      "multicopter"
+    ],
+    "content": "Werkdocument voor opbouw, configuratie, onderhoud en operationele controles van een multicopter."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_003",
+    "title": "Gebruik door een Teams-assistent",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "gebruik",
+      "teams-assistent"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "dit",
+      "document",
+      "vragen",
+      "waar",
+      "begin",
+      "bouwen",
+      "welke",
+      "controles",
+      "doe",
+      "vóór",
+      "eerste"
+    ],
+    "content": "Gebruik dit document voor vragen als:\n- “Waar begin ik met bouwen?”\n- “Welke controles doe ik vóór de eerste vlucht?”\n- “Wat controleer ik na een crash?”\n- “Hoe houd ik onderhoud bij?”"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_004",
+    "title": "Afbakening",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "afbakening"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "dit",
+      "document",
+      "beschrijft",
+      "wat",
+      "doet",
+      "controleert",
+      "definities",
+      "theorie",
+      "zie",
+      "onderwijsformats",
+      "faq",
+      "voorbeeldantwoorden"
+    ],
+    "content": "Dit document beschrijft **wat je doet en controleert**.  \nVoor **definities en theorie**: zie document 1.  \nVoor **onderwijsformats**: zie document 3.  \nVoor **FAQ’s en voorbeeldantwoorden**: zie document 4.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_005",
+    "title": "1. Ontwerpvolgorde in 8 stappen",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "ontwerpvolgorde",
+      "stappen"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "bepaal",
+      "missie",
+      "randvoorwaarden",
+      "payload",
+      "gewenste",
+      "vliegtijd",
+      "maximale",
+      "afmeting",
+      "binnen",
+      "buiten",
+      "veiligheidsniveau",
+      "kies"
+    ],
+    "content": "1. **Bepaal missie en randvoorwaarden**  \n   Payload, gewenste vliegtijd, maximale afmeting, binnen/buiten, veiligheidsniveau.\n2. **Kies frame en propellerklasse**  \n   Grootte moet passen bij propellers, elektronica en payload.\n3. **Kies motoren**  \n   Voldoende stuwkracht, thermische marge en passende KV.\n4. **Kies ESC’s**  \n   Stroommarge, protocolcompatibiliteit en koeling.\n5. **Kies accu**  \n   Spanning, capaciteit, massa, connector en ontlaadvermogen.\n6. **Kies flight controller en firmware**  \n   Passend bij sensoren, poorten, gewenste modi en onderwijsdoel.\n7. **Kies besturings- en dataomgeving**  \n   Zender, ontvanger, telemetrie, ground station, logging.\n8. **Plan testopbouw**  \n   Bench test → simulatie/HIL → indoor → buiten.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_006",
+    "title": "2.1 Mechanisch",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "mechanisch"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "propellers",
+      "mogen",
+      "elkaar",
+      "frameonderdelen",
+      "nooit",
+      "kunnen",
+      "raken",
+      "flight",
+      "controller",
+      "moet",
+      "trillingsarm",
+      "logisch"
+    ],
+    "content": "- Propellers mogen elkaar of frameonderdelen nooit kunnen raken.\n- Flight controller moet trillingsarm en logisch georiënteerd gemonteerd zijn.\n- Accu moet stevig vastzitten en snel te verwijderen zijn.\n- Kabels moeten vrij liggen van propellers en scharnierpunten."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_007",
+    "title": "2.2 Elektrisch",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "elektrisch"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "polariteit",
+      "altijd",
+      "dubbel",
+      "controleren",
+      "vóór",
+      "eerste",
+      "power-on",
+      "connectoren",
+      "moeten",
+      "passen",
+      "verwachte",
+      "stroom"
+    ],
+    "content": "- Polariteit altijd dubbel controleren vóór eerste power-on.\n- Connectoren moeten passen bij verwachte stroom.\n- ESC-continuestroom moet boven realistische piekbelasting liggen.\n- Voedingspaden voor flight controller en randapparatuur moeten bekend zijn."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_008",
+    "title": "2.3 Logisch/softwarematig",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "logisch",
+      "softwarematig"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "airframe-configuratie",
+      "moet",
+      "overeenkomen",
+      "echte",
+      "frame",
+      "motorvolgorde",
+      "draairichting",
+      "moeten",
+      "firmware-instellingen",
+      "rc-kanalen",
+      "logisch",
+      "gemapt"
+    ],
+    "content": "- Airframe-configuratie moet overeenkomen met het echte frame.\n- Motorvolgorde en draairichting moeten overeenkomen met firmware-instellingen.\n- RC-kanalen moeten logisch gemapt zijn.\n- Vliegmodi en failsafes moeten vóór de eerste propeller-run getest zijn.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_009",
+    "title": "3.1 Mechanische opbouw",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "mechanische",
+      "opbouw"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "frame",
+      "recht",
+      "torsiestijf",
+      "opgebouwd",
+      "schroeven",
+      "passende",
+      "lengte",
+      "borging",
+      "gebruikt",
+      "motoren",
+      "vlak",
+      "stevig"
+    ],
+    "content": "- [ ] Frame recht en torsiestijf opgebouwd\n- [ ] Schroeven met passende lengte en borging gebruikt\n- [ ] Motoren vlak en stevig bevestigd\n- [ ] Prop-adapters/spinners correct gemonteerd\n- [ ] Flight controller trillingsarm gemonteerd\n- [ ] GPS/magnetometer vrij van sterke stroombronnen geplaatst\n- [ ] Ontvangerantennes vrij en logisch georiënteerd\n- [ ] Accuband en antislip aanwezig\n- [ ] Landingsgestel stabiel"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_010",
+    "title": "3.2 Elektrische opbouw",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "elektrische",
+      "opbouw"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "hoofdvoedingspad",
+      "gecontroleerd",
+      "polariteit",
+      "soldeerverbindingen",
+      "mechanisch",
+      "sterk",
+      "elektrisch",
+      "schoon",
+      "geen",
+      "blanke",
+      "aders",
+      "zichtbaar"
+    ],
+    "content": "- [ ] Hoofdvoedingspad gecontroleerd op polariteit\n- [ ] Soldeerverbindingen mechanisch sterk en elektrisch schoon\n- [ ] Geen blanke aders zichtbaar\n- [ ] Krimpkous of isolatie op alle risicopunten\n- [ ] ESC-signaalkabels correct aangesloten\n- [ ] Eventuele BEC/regelvoeding passend gekozen\n- [ ] Telemetrie, GPS en extra sensoren op juiste poorten"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_011",
+    "title": "3.3 Logische opbouw",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "logische",
+      "opbouw"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "juiste",
+      "frame",
+      "type",
+      "geselecteerd",
+      "mixer",
+      "configuratie",
+      "actief",
+      "motorvolgorde",
+      "gecontroleerd",
+      "draairichting",
+      "motoren",
+      "props"
+    ],
+    "content": "- [ ] Juiste frame type geselecteerd\n- [ ] Juiste mixer/configuratie actief\n- [ ] Motorvolgorde gecontroleerd\n- [ ] Draairichting motoren gecontroleerd\n- [ ] Juiste props op juiste motoren geplaatst\n- [ ] RTL/home/failsafe-parameters ingevuld\n- [ ] Logging ingeschakeld\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_012",
+    "title": "4. Eerste opstart zonder propellers",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "eerste",
+      "opstart",
+      "zonder",
+      "propellers"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "altijd",
+      "eerst",
+      "zonder",
+      "propellers",
+      "visuele",
+      "inspectie",
+      "power-on",
+      "rook-",
+      "kortsluitbewustzijn",
+      "controleer",
+      "onverwachte",
+      "warmte"
+    ],
+    "content": "**Altijd eerst zonder propellers.**\n\n1. Visuele inspectie\n2. Power-on met rook-/kortsluitbewustzijn\n3. Controleer op onverwachte warmte\n4. Verbind met configuratiesoftware\n5. Controleer sensorstatus\n6. Controleer RC-ingangen\n7. Controleer motor-outputvolgorde zonder propellers\n8. Controleer richting van elk motorcommando\n9. Test arm/disarm\n10. Test failsafe-reacties op een veilige manier\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_013",
+    "title": "5. Kalibratievolgorde",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "kalibratievolgorde"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "aanbevolen",
+      "volgorde",
+      "firmware",
+      "frameconfiguratie",
+      "accelerometer",
+      "imu",
+      "kompas",
+      "indien",
+      "aanwezig",
+      "zinvol",
+      "rc-kalibratie",
+      "vluchtmodi"
+    ],
+    "content": "Aanbevolen volgorde:\n1. firmware en frameconfiguratie;\n2. accelerometer/IMU;\n3. kompas indien aanwezig en zinvol;\n4. RC-kalibratie;\n5. vluchtmodi;\n6. failsafes;\n7. ESC/motor-outputcontrole;\n8. logging en telemetrie;\n9. indoor hovertest;\n10. pas daarna buiten vliegen.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_014",
+    "title": "6. Bench test checklist",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "bench",
+      "test",
+      "checklist"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "propellers",
+      "verwijderd",
+      "werkplek",
+      "vrij",
+      "metalen",
+      "rommel",
+      "losse",
+      "kabels",
+      "veilige",
+      "voeding",
+      "aangesloten",
+      "flight"
+    ],
+    "content": "- [ ] Propellers verwijderd\n- [ ] Werkplek vrij van metalen rommel en losse kabels\n- [ ] Veilige voeding aangesloten\n- [ ] Flight controller start zonder foutmeldingen\n- [ ] Sensorwaarden plausibel\n- [ ] RC-input correct\n- [ ] Flight modes schakelen correct\n- [ ] Telemetrie/logging werkt\n- [ ] Motors reageren in juiste volgorde\n- [ ] Noodstop of snelle disarm bekend en getest\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_015",
+    "title": "7. Pre-flight checklist",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "pre-flight",
+      "checklist"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "vóór",
+      "elke",
+      "vlucht",
+      "vaste",
+      "routine"
+    ],
+    "content": "Gebruik vóór elke vlucht een vaste routine."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_016",
+    "title": "7.1 Omgeving",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "omgeving"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "vlieggebied",
+      "toegestaan",
+      "veilig",
+      "voldoende",
+      "afstand",
+      "tot",
+      "mensen",
+      "dieren",
+      "voertuigen",
+      "obstakels",
+      "wind",
+      "zichtcondities"
+    ],
+    "content": "- [ ] Vlieggebied is toegestaan en veilig\n- [ ] Voldoende afstand tot mensen, dieren, voertuigen en obstakels\n- [ ] Wind en zichtcondities passen bij toestel en piloot\n- [ ] Start- en landingszone vrij\n- [ ] Home-positie logisch gekozen"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_017",
+    "title": "7.2 Drone",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "drone"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "frame",
+      "zonder",
+      "scheuren",
+      "speling",
+      "propellers",
+      "onbeschadigd",
+      "correct",
+      "vast",
+      "accu",
+      "mechanisch",
+      "goed",
+      "vastgezet"
+    ],
+    "content": "- [ ] Frame zonder scheuren of speling\n- [ ] Propellers onbeschadigd en correct vast\n- [ ] Accu mechanisch goed vastgezet\n- [ ] Kabels niet in propellerbaan\n- [ ] Sensoren vrij en schoon\n- [ ] Antennes correct geplaatst\n- [ ] CG acceptabel"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_018",
+    "title": "7.3 Systeemstatus",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "systeemstatus"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "voldoende",
+      "accuspanning",
+      "gps-lock",
+      "indien",
+      "nodig",
+      "geen",
+      "kritieke",
+      "waarschuwingen",
+      "juiste",
+      "vliegmodus",
+      "start",
+      "rtl"
+    ],
+    "content": "- [ ] Voldoende accuspanning\n- [ ] GPS-lock indien nodig\n- [ ] Geen kritieke waarschuwingen\n- [ ] Juiste vliegmodus voor de start\n- [ ] RTL/failsafe geverifieerd\n- [ ] Piloot kent noodprocedure"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_019",
+    "title": "7.4 Team",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "team"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "rollen",
+      "afgesproken",
+      "piloot",
+      "spotter",
+      "observator",
+      "commando",
+      "abort-criteria",
+      "uitgesproken",
+      "---"
+    ],
+    "content": "- [ ] Rollen afgesproken: piloot, spotter, observator\n- [ ] Commando’s afgesproken\n- [ ] Abort-criteria uitgesproken\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_020",
+    "title": "8. Startprocedure",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "startprocedure"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "plaats",
+      "drone",
+      "stabiel",
+      "vrij",
+      "zet",
+      "zender",
+      "aan",
+      "vóór",
+      "procedure",
+      "sluit",
+      "accu",
+      "wacht"
+    ],
+    "content": "1. Plaats drone stabiel en vrij.\n2. Zet zender aan vóór de drone als dat je procedure is.\n3. Sluit accu aan en wacht op complete initialisatie.\n4. Controleer armstatus, vluchtmodus en waarschuwingen.\n5. Laatste visuele check van props en omgeving.\n6. Arm bewust, niet automatisch.\n7. Stijg beheerst op naar veilige controlehoogte.\n8. Controleer eerst stabiliteit, respons en geluid.\n9. Pas daarna missie of verdere test.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_021",
+    "title": "9. Post-flight checklist",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "post-flight",
+      "checklist"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "direct",
+      "disarmen",
+      "accu",
+      "loskoppelen",
+      "temperatuur",
+      "motoren",
+      "esc",
+      "voelen",
+      "props",
+      "inspecteren",
+      "chips",
+      "kromming"
+    ],
+    "content": "- [ ] Direct disarmen\n- [ ] Accu loskoppelen\n- [ ] Temperatuur van motoren, ESC’s en accu voelen\n- [ ] Props inspecteren op chips of kromming\n- [ ] Frame en landing gear controleren\n- [ ] Logbestanden veiligstellen\n- [ ] Bijzonderheden noteren\n- [ ] Accu op juiste opslag- of laadroute zetten\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_022",
+    "title": "Na elke vlucht",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "elke",
+      "vlucht"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "schoonmaken",
+      "props",
+      "frame",
+      "kabels",
+      "inspecteren",
+      "bijzonderheden",
+      "loggen",
+      "accu",
+      "beoordelen",
+      "zwelling",
+      "schade",
+      "spanning"
+    ],
+    "content": "- schoonmaken;\n- props, frame en kabels inspecteren;\n- bijzonderheden loggen;\n- accu beoordelen op zwelling, schade en spanning."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_023",
+    "title": "Wekelijks of na intensief gebruik",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "wekelijks",
+      "intensief",
+      "gebruik"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "schroefverbindingen",
+      "nalopen",
+      "motorlagers",
+      "speling",
+      "controleren",
+      "trillingsbronnen",
+      "opsporen",
+      "antenne-",
+      "connectorconditie",
+      "firmware-instellingen",
+      "logging",
+      "beoordelen"
+    ],
+    "content": "- schroefverbindingen nalopen;\n- motorlagers/speling controleren;\n- trillingsbronnen opsporen;\n- antenne- en connectorconditie controleren;\n- firmware-instellingen en logging beoordelen."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_024",
+    "title": "Na harde landing of crash",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "harde",
+      "landing",
+      "crash"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "propellers",
+      "vervangen",
+      "afzonderlijk",
+      "vrijgeven",
+      "inspectie",
+      "motoras",
+      "slingering",
+      "controleren",
+      "frame",
+      "haarscheuren",
+      "inspecteren",
+      "flight"
+    ],
+    "content": "- propellers vervangen of afzonderlijk vrijgeven na inspectie;\n- motoras op slingering controleren;\n- frame op haarscheuren inspecteren;\n- flight controller-montage opnieuw controleren;\n- sensor- en GPS-mast uitlijning controleren;\n- volledige bench test opnieuw uitvoeren.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_025",
+    "title": "11. Accubeheer",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "accubeheer"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebruik",
+      "alleen",
+      "onbeschadigde",
+      "lipo",
+      "laad",
+      "passend",
+      "laadprogramma",
+      "laat",
+      "accu",
+      "warm",
+      "wegleggen",
+      "gesloten"
+    ],
+    "content": "- Gebruik alleen onbeschadigde LiPo’s.\n- Laad met passend laadprogramma.\n- Laat accu’s niet warm wegleggen in gesloten tas.\n- Bewaar accu’s op opslagspanning.\n- Markeer oude of verdachte accu’s direct.\n- Gebruik een eenduidig accusysteem met ID, aantal cycli en status."
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_026",
+    "title": "Minimale accuregistratie",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "minimale",
+      "accuregistratie"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "accu-id",
+      "type",
+      "capaciteit",
+      "cycli",
+      "laatste",
+      "vlucht",
+      "status",
+      "---",
+      "b01",
+      "lipo",
+      "5200",
+      "mah"
+    ],
+    "content": "| Accu-ID | Type | Capaciteit | Cycli | Laatste vlucht | Status |\n|---|---|---:|---:|---|---|\n| B01 | 4S LiPo | 5200 mAh | 18 | 2026-04-03 | OK / observeren / afkeuren |\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_028",
+    "title": "13. Snelle foutsignalen die directe stop rechtvaardigen",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "snelle",
+      "foutsignalen",
+      "die",
+      "directe",
+      "stop",
+      "rechtvaardigen"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "onverwachte",
+      "rook",
+      "geur",
+      "hitte",
+      "sterke",
+      "trillingen",
+      "duidelijk",
+      "asymmetrisch",
+      "motorgeluid",
+      "onverklaarbare",
+      "sensorfouten",
+      "wegvallende"
+    ],
+    "content": "- onverwachte rook, geur of hitte;\n- sterke trillingen;\n- duidelijk asymmetrisch motorgeluid;\n- onverklaarbare sensorfouten;\n- wegvallende RC-link;\n- onlogische modewissels;\n- zichtbaar beschadigde propeller of loszittende accu.\n\nBij één van deze signalen: **niet doorvliegen**.\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_029",
+    "title": "14. Beslisboom voor de werkbank",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "beslisboom",
+      "werkbank"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "drone",
+      "start",
+      "goed",
+      "krijgt",
+      "flight",
+      "controller",
+      "voeding",
+      "polariteit",
+      "correct",
+      "firmware",
+      "configuratie",
+      "passend"
+    ],
+    "content": "**Drone start niet goed op**\n1. Krijgt de flight controller voeding?\n2. Is polariteit correct?\n3. Is de firmware/configuratie passend?\n4. Werkt verbinding met GCS?\n5. Zijn RC en sensoren zichtbaar?\n\n**Drone armt niet**\n1. Welke pre-arm melding zie je?\n2. Is de gekozen modus toegestaan?\n3. Is throttle laag?\n4. Zijn GPS/kompas-eisen passend voor deze situatie?\n5. Is failsafe of geofence actief?\n\n**Drone trilt te veel**\n1. Props beschadigd?\n2. Motoras recht?\n3. Schroeven los?\n4. Flight controller te stijf of juist te slap gemonteerd?\n5. Propellercombinatie passend?\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_030",
+    "title": "15. Minimale onderhoudslog",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "minimale",
+      "onderhoudslog"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "datum",
+      "toestel",
+      "uren",
+      "vluchten",
+      "bevinding",
+      "actie",
+      "uitvoerder",
+      "---",
+      "2026-04-03",
+      "f450-01",
+      "prop",
+      "kleine"
+    ],
+    "content": "| Datum | Toestel | Uren/vluchten | Bevinding | Actie | Uitvoerder |\n|---|---|---:|---|---|---|\n| 2026-04-03 | F450-01 | 12 vluchten | Prop 2 kleine chip | vervangen | docent A |\n\n---"
+  },
+  {
+    "id": "02_bouw_onderhoud_checklists_032",
+    "title": "Bronbasis",
+    "document": "02_bouw_onderhoud_checklists",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "bronbasis"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "gebaseerd",
+      "multicopter",
+      "opbouw",
+      "airframe-",
+      "propulsieontwerp",
+      "pixhawk-configuratie",
+      "hil-teststappen",
+      "failsafe-principes",
+      "uit",
+      "aangeleverde",
+      "bronset",
+      "aangevuld"
+    ],
+    "content": "Gebaseerd op multicopter opbouw, airframe- en propulsieontwerp, Pixhawk-configuratie, HIL-teststappen en failsafe-principes uit de aangeleverde bronset, aangevuld met algemene werkplaats- en vliegveiligheidspraktijk."
+  },
+  {
+    "id": "04_faq_voorbeeldantwoorden_030",
+    "title": "Vraag: “Motor 3 start later dan de rest. Is dat erg?”",
+    "document": "04_faq_voorbeeldantwoorden",
+    "type": "procedure",
+    "audience": [
+      "student",
+      "docent",
+      "beide"
+    ],
+    "topic": [
+      "vraag",
+      "motor",
+      "start",
+      "later",
+      "rest",
+      "erg"
+    ],
+    "safety_level": "normal",
+    "keywords": [
+      "antwoordpatroon",
+      "relevant",
+      "controleer",
+      "eerst",
+      "zonder",
+      "propellers",
+      "motorvolgorde",
+      "esc-signaal",
+      "connectoren",
+      "kalibratie",
+      "wrijving",
+      "motor"
+    ],
+    "content": "**Antwoordpatroon**  \nJa, dat is relevant. Controleer eerst zonder propellers: motorvolgorde, ESC-signaal, connectoren, kalibratie, wrijving in de motor en schade aan de prop-as. Pas daarna opnieuw testen."
+  }
+]
