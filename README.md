@@ -5,7 +5,7 @@ Dit starterpakket is bedoeld voor een eerste schoolpilot van een AI-assistent vo
 ## Architectuur
 
 - **GitHub Pages** serveert de statische frontend uit de map `/docs`.
-- **Mini-pc** draait de Python-backend uit de map `/backend`.
+- **Mini-pc** draait de Node js backend uit de map `/backend`.
 - **Teams** laadt de frontend als tab/tegeltje.
 - **OpenAI** wordt alleen vanaf de backend aangeroepen.
 - **Kennisbank** staat in `/knowledge`.
