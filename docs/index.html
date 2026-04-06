@@ -1327,5 +1327,18 @@
       checkHealth();
     };
   </script>
+<script src="https://res.cdn.office.net/teams-js/2.19.0/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", async () => {
+    try {
+      if (window.microsoftTeams?.app) {
+        await window.microsoftTeams.app.initialize();
+        console.log("Teams SDK geïnitialiseerd");
+      }
+    } catch (err) {
+      console.warn("Teams init niet gelukt:", err);
+    }
+  });
+</script>
 </body>
 </html>
