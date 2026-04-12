@@ -83,6 +83,10 @@
       font: inherit;
     }
 
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     /* =========================================================
        3. LAYOUT
        ========================================================= */
@@ -228,6 +232,10 @@
       transform: translateY(-1px);
     }
 
+    .toolbar-btn:active {
+      transform: translateY(0);
+    }
+
     .status {
       display: flex;
       align-items: center;
@@ -272,6 +280,7 @@
       padding: 28px 28px 22px;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      scroll-padding-top: 18px;
     }
 
     .messages {
@@ -429,14 +438,22 @@
       background: rgba(255, 255, 255, 0.05);
     }
 
+    .bubble-content .katex {
+      font-size: 1.06em;
+    }
+
     .bubble-content .katex-display {
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 4px 0;
+      padding: 10px 12px;
+      margin: 14px 0;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     /* =========================================================
-       7. SOURCES / QUICK ACTIONS / TYPING
+       7. SOURCES / QUICK ACTIONS / THINKING
        ========================================================= */
     .source-box {
       margin-top: 12px;
@@ -466,10 +483,10 @@
       margin-top: 4px;
     }
 
-    .typing {
+    .thinking {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 12px;
       padding: 12px 14px;
       border-radius: 16px;
       background: var(--assistant-bubble);
@@ -477,32 +494,37 @@
       width: fit-content;
     }
 
-    .typing span {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.82);
-      display: inline-block;
-      animation: blink 1.2s infinite ease-in-out;
+    .drone-loader {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
     }
 
-    .typing span:nth-child(2) {
-      animation-delay: 0.15s;
+    .drone-loader svg {
+      width: 34px;
+      height: 34px;
+      stroke: #8db9ff;
+      fill: rgba(141, 185, 255, 0.16);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+      animation: droneSpin 1.3s linear infinite;
+      transform-origin: 50% 50%;
     }
 
-    .typing span:nth-child(3) {
-      animation-delay: 0.3s;
+    .thinking-label {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: nowrap;
     }
 
-    @keyframes blink {
-      0%, 80%, 100% {
-        transform: scale(0.7);
-        opacity: 0.45;
-      }
-      40% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    @keyframes droneSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     .quick-actions {
@@ -610,7 +632,84 @@
     }
 
     /* =========================================================
-       9. RESPONSIVE
+       9. MODAL
+       ========================================================= */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(5, 9, 18, 0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: min(460px, 100%);
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(180deg, rgba(20, 30, 48, 0.98), rgba(11, 18, 32, 0.98));
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      padding: 20px;
+    }
+
+    .modal-title {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .modal-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .modal-btn {
+      appearance: none;
+      border-radius: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.15s ease;
+    }
+
+    .modal-btn.secondary {
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .modal-btn.primary {
+      border: none;
+      color: #ffffff;
+      background: linear-gradient(180deg, #3b82f6, #2563eb);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .modal-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* =========================================================
+       10. RESPONSIVE
        ========================================================= */
     @media (max-width: 900px) {
       .app-shell {
@@ -710,6 +809,10 @@
         font-size: 11px;
       }
 
+      .thinking-label {
+        white-space: normal;
+      }
+
       .input-wrap {
         padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
       }
@@ -735,6 +838,10 @@
       .send-btn {
         width: 100%;
         min-height: 48px;
+      }
+
+      .modal-card {
+        padding: 18px;
       }
     }
   </style>
@@ -808,6 +915,32 @@
     </div>
   </div>
 
+  <!-- Custom modal -->
+  <div
+    id="confirm-modal"
+    class="modal-overlay"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="confirm-modal-title"
+  >
+    <div class="modal-card">
+      <h2 id="confirm-modal-title" class="modal-title">Nieuwe chat starten?</h2>
+      <p class="modal-text" id="confirm-modal-text">
+        Je huidige chatgeschiedenis wordt dan gewist.
+      </p>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-btn secondary" id="confirm-cancel-btn">
+          Annuleren
+        </button>
+        <button type="button" class="modal-btn primary" id="confirm-ok-btn">
+          Nieuwe chat
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
@@ -821,13 +954,14 @@
     const PUBLIC_API_BASE = "https://christiane-turfy-guiltily.ngrok-free.dev";
     const LOCAL_API_BASE = "http://localhost:3000";
     const GITHUB_PAGES_HOST = "fritsgroen.github.io";
-    const STORAGE_KEY = "dronetech_chat_history_v7";
+    const STORAGE_KEY = "dronetech_chat_history_v8";
 
     /* =========================================================
        2. STATE
        ========================================================= */
     let conversation = [];
     let isWaiting = false;
+    let confirmResolver = null;
 
     /* =========================================================
        3. DOM REFERENCES
@@ -840,6 +974,11 @@
     const statusText = document.getElementById("status-text");
     const statusDot = document.getElementById("status-dot");
     const newChatBtn = document.getElementById("new-chat-btn");
+
+    const confirmModal = document.getElementById("confirm-modal");
+    const confirmModalText = document.getElementById("confirm-modal-text");
+    const confirmOkBtn = document.getElementById("confirm-ok-btn");
+    const confirmCancelBtn = document.getElementById("confirm-cancel-btn");
 
     /* =========================================================
        4. API SETUP
@@ -873,11 +1012,27 @@
       });
     }
 
+    function normalizeMathDelimiters(text) {
+      let normalized = String(text || "").replace(/\u00A0/g, " ");
+
+      normalized = normalized.replace(
+        /(^|\n)\[\s*\n([\s\S]*?)\n\](?=\n|$)/g,
+        (match, prefix, inner) => {
+          const trimmedInner = inner.trim();
+          if (!/[\\^_{}]/.test(trimmedInner)) return match;
+          return `${prefix}\\[\n${trimmedInner}\n\\]`;
+        }
+      );
+
+      return normalized;
+    }
+
     function renderAssistantMarkdown(text) {
       try {
+        const normalized = normalizeMathDelimiters(text);
         const rawHtml = window.marked
-          ? marked.parse(text || "")
-          : renderUserText(text);
+          ? marked.parse(normalized)
+          : renderUserText(normalized);
 
         return window.DOMPurify ? DOMPurify.sanitize(rawHtml) : rawHtml;
       } catch {
@@ -891,9 +1046,9 @@
       renderMathInElement(container, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
           { left: "\\(", right: "\\)", display: false },
-          { left: "\\[", right: "\\]", display: true }
+          { left: "$", right: "$", display: false }
         ],
         throwOnError: false,
         ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
@@ -930,12 +1085,28 @@
       input.style.height = Math.min(input.scrollHeight, 180) + "px";
     }
 
-    function scrollToBottom() {
-      chatArea.scrollTop = chatArea.scrollHeight;
+    function scrollToBottom(behavior = "smooth") {
+      chatArea.scrollTo({
+        top: chatArea.scrollHeight,
+        behavior
+      });
+    }
+
+    function scrollRowToTop(row, behavior = "smooth") {
+      if (!row) return;
+
+      const containerRect = chatArea.getBoundingClientRect();
+      const rowRect = row.getBoundingClientRect();
+      const offsetWithinContainer = rowRect.top - containerRect.top + chatArea.scrollTop;
+
+      chatArea.scrollTo({
+        top: Math.max(0, offsetWithinContainer - 12),
+        behavior
+      });
     }
 
     function mobileScrollFix() {
-      setTimeout(scrollToBottom, 250);
+      setTimeout(() => scrollToBottom("smooth"), 250);
     }
 
     function escapeHtml(text) {
@@ -974,10 +1145,52 @@
       ].join("\n");
     }
 
+    function resetChat() {
+      localStorage.removeItem(STORAGE_KEY);
+      conversation = [];
+      messagesEl.innerHTML = "";
+      renderConversation();
+      input.value = "";
+      autoResizeTextarea();
+      checkHealth();
+      input.focus();
+      requestAnimationFrame(() => {
+        chatArea.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    function openConfirmModal(message) {
+      confirmModalText.textContent = message;
+      confirmModal.classList.add("open");
+      confirmModal.setAttribute("aria-hidden", "false");
+
+      requestAnimationFrame(() => {
+        confirmOkBtn.focus();
+      });
+
+      return new Promise((resolve) => {
+        confirmResolver = resolve;
+      });
+    }
+
+    function closeConfirmModal(result) {
+      confirmModal.classList.remove("open");
+      confirmModal.setAttribute("aria-hidden", "true");
+
+      if (typeof confirmResolver === "function") {
+        confirmResolver(result);
+        confirmResolver = null;
+      }
+
+      newChatBtn.focus();
+    }
+
     /* =========================================================
        7. UI RENDERING
        ========================================================= */
-    function createBubble(role, text, metaText = "", sources = []) {
+    function createBubble(role, text, metaText = "", sources = [], options = {}) {
+      const { scrollMode = "none" } = options;
+
       const row = document.createElement("div");
       row.className = `message-row ${role}`;
 
@@ -1041,24 +1254,45 @@
         renderMath(content);
       }
 
-      scrollToBottom();
+      if (scrollMode === "bottom") {
+        requestAnimationFrame(() => scrollToBottom("smooth"));
+      } else if (scrollMode === "assistant-top") {
+        requestAnimationFrame(() => scrollRowToTop(row, "smooth"));
+      }
+
+      return row;
     }
 
-    function showTyping() {
+    function showThinking() {
       const row = document.createElement("div");
       row.className = "message-row assistant";
       row.id = "typing-row";
 
-      const typing = document.createElement("div");
-      typing.className = "typing";
-      typing.innerHTML = "<span></span><span></span><span></span>";
+      const thinking = document.createElement("div");
+      thinking.className = "thinking";
+      thinking.innerHTML = `
+        <div class="drone-loader" aria-hidden="true">
+          <svg viewBox="0 0 100 100" role="img">
+            <circle cx="20" cy="20" r="10"></circle>
+            <circle cx="80" cy="20" r="10"></circle>
+            <circle cx="20" cy="80" r="10"></circle>
+            <circle cx="80" cy="80" r="10"></circle>
+            <line x1="29" y1="29" x2="41" y2="41"></line>
+            <line x1="71" y1="29" x2="59" y2="41"></line>
+            <line x1="29" y1="71" x2="41" y2="59"></line>
+            <line x1="71" y1="71" x2="59" y2="59"></line>
+            <rect x="38" y="38" width="24" height="24" rx="6"></rect>
+          </svg>
+        </div>
+        <div class="thinking-label">DroneTech Coach denkt na...</div>
+      `;
 
-      row.appendChild(typing);
+      row.appendChild(thinking);
       messagesEl.appendChild(row);
-      scrollToBottom();
+      scrollToBottom("smooth");
     }
 
-    function hideTyping() {
+    function hideThinking() {
       const typingRow = document.getElementById("typing-row");
       if (typingRow) {
         typingRow.remove();
@@ -1124,7 +1358,9 @@
             "",
             "Stel je vraag over drone-techniek, onderhoud, checklists, PvE’s, logboeken, projectopdrachten of formules zoals $P = U \\\\cdot I$."
           ].join("\n"),
-          nowTime()
+          nowTime(),
+          [],
+          { scrollMode: "none" }
         );
 
         addQuickActions();
@@ -1132,8 +1368,16 @@
       }
 
       conversation.forEach((msg) => {
-        createBubble(msg.role, msg.content, msg.time || "", msg.sources || []);
+        createBubble(
+          msg.role,
+          msg.content,
+          msg.time || "",
+          msg.sources || [],
+          { scrollMode: "none" }
+        );
       });
+
+      requestAnimationFrame(() => scrollToBottom("auto"));
     }
 
     /* =========================================================
@@ -1180,11 +1424,11 @@
 
       conversation.push(userMsg);
       saveConversation();
-      createBubble("user", userMsg.content, userMsg.time);
+      createBubble("user", userMsg.content, userMsg.time, [], { scrollMode: "bottom" });
 
       input.value = "";
       autoResizeTextarea();
-      showTyping();
+      showThinking();
 
       try {
         const payload = {
@@ -1222,7 +1466,7 @@
 
         const sources = Array.isArray(data.sources) ? data.sources : [];
 
-        hideTyping();
+        hideThinking();
 
         const assistantMsg = {
           role: "assistant",
@@ -1237,12 +1481,13 @@
           "assistant",
           assistantMsg.content,
           assistantMsg.time,
-          assistantMsg.sources
+          assistantMsg.sources,
+          { scrollMode: "assistant-top" }
         );
 
         await checkHealth();
       } catch (error) {
-        hideTyping();
+        hideThinking();
 
         const assistantMsg = {
           role: "assistant",
@@ -1253,7 +1498,13 @@
 
         conversation.push(assistantMsg);
         saveConversation();
-        createBubble("assistant", assistantMsg.content, assistantMsg.time, []);
+        createBubble(
+          "assistant",
+          assistantMsg.content,
+          assistantMsg.time,
+          [],
+          { scrollMode: "assistant-top" }
+        );
 
         setStatus("error", "Backend fout");
         console.error("Backend error:", error);
@@ -1261,7 +1512,6 @@
         isWaiting = false;
         sendBtn.disabled = false;
         input.focus();
-        scrollToBottom();
       }
     }
 
@@ -1288,20 +1538,34 @@
       }
     });
 
-    newChatBtn.addEventListener("click", () => {
-      const confirmed = window.confirm(
+    newChatBtn.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const confirmed = await openConfirmModal(
         "Weet je zeker dat je een nieuwe chat wilt starten? De huidige chatgeschiedenis wordt dan gewist."
       );
 
       if (!confirmed) return;
 
-      localStorage.removeItem(STORAGE_KEY);
-      conversation = [];
-      renderConversation();
-      input.value = "";
-      autoResizeTextarea();
-      checkHealth();
-      input.focus();
+      resetChat();
+    });
+
+    confirmOkBtn.addEventListener("click", () => closeConfirmModal(true));
+    confirmCancelBtn.addEventListener("click", () => closeConfirmModal(false));
+
+    confirmModal.addEventListener("click", (event) => {
+      if (event.target === confirmModal) {
+        closeConfirmModal(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!confirmModal.classList.contains("open")) return;
+
+      if (event.key === "Escape") {
+        closeConfirmModal(false);
+      }
     });
 
     /* =========================================================
@@ -1321,24 +1585,22 @@
     });
 
     window.resetDroneTechChat = function () {
-      localStorage.removeItem(STORAGE_KEY);
-      conversation = [];
-      renderConversation();
-      checkHealth();
+      resetChat();
     };
   </script>
-<script src="https://res.cdn.office.net/teams-js/2.19.0/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", async () => {
-    try {
-      if (window.microsoftTeams?.app) {
-        await window.microsoftTeams.app.initialize();
-        console.log("Teams SDK geïnitialiseerd");
+
+  <script src="https://res.cdn.office.net/teams-js/2.19.0/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", async () => {
+      try {
+        if (window.microsoftTeams?.app) {
+          await window.microsoftTeams.app.initialize();
+          console.log("Teams SDK geïnitialiseerd");
+        }
+      } catch (err) {
+        console.warn("Teams init niet gelukt:", err);
       }
-    } catch (err) {
-      console.warn("Teams init niet gelukt:", err);
-    }
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
