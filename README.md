@@ -1,85 +1,100 @@
-# DroneTech Coach — starterpakket
+# DroneTech Coach
 
-Dit starterpakket is bedoeld voor een eerste schoolpilot van een AI-assistent voor drone-techniek.
+DroneTech Coach is een kennisbot voor Microsoft Teams en GitHub Pages.  
+Gebruikers kunnen vragen stellen over dronetechniek, lesmateriaal, projectdocumentatie, checklists en andere kennisbestanden.  
+De frontend draait als webpagina / Teams-tab en de backend draait met **Node.js**.
 
-## Architectuur
+---
 
-- **GitHub Pages** serveert de statische frontend uit de map `/docs`.
-- **Mini-pc** draait de Node js backend uit de map `/backend`.
-- **Teams** laadt de frontend als tab/tegeltje.
-- **OpenAI** wordt alleen vanaf de backend aangeroepen.
-- **Kennisbank** staat in `/knowledge`.
+## Wat doet deze app?
 
-## Wat komt waar?
+De app bestaat uit 2 delen:
 
-### In GitHub
-Zet de **hele repository** in GitHub.
+### 1. Frontend
+De frontend is de chatinterface die de gebruiker ziet.
 
-- `/docs` → statische site voor GitHub Pages
-- `/backend` → broncode voor de mini-pc
-- `/knowledge` → kennisdocumenten en chunk-bestanden
-- `/teams-app` → Teams-app package/manifest
-- `/tests` → testvragen
-- `/scripts` → scripts om de kennisbank opnieuw op te bouwen
+Functies:
+- vragen stellen aan de kennisbot
+- nieuwe chat starten
+- nette weergave van antwoorden
+- formuleweergave met KaTeX
+- laadanimatie met drone-loader
+- bruikbaar in browser én in Microsoft Teams
 
-### Op de mini-pc
-Clone dezelfde repository, bijvoorbeeld naar:
+De frontend kan gehost worden op:
+- **GitHub Pages**
+- of een andere statische webhost
 
-```bash
-/opt/dronetech-coach
-```
+### 2. Backend
+De backend draait lokaal of op een server met **Node.js**.
 
-Daar draai je alleen:
-- `/backend`
-- `/knowledge`
-- optioneel `/scripts`
+Taken van de backend:
+- ontvangen van vragen uit de frontend
+- inlezen van kennisbestanden uit de knowledge-map
+- relevante informatie ophalen uit documenten
+- de vraag samen met context naar OpenAI sturen
+- het antwoord teruggeven aan de frontend
 
-De map `/docs` hoeft op de mini-pc niet actief geserveerd te worden als GitHub Pages dat al doet.
+De backend draait meestal op:
+- `http://localhost:3000`
 
-## Snelle start
+Als de backend van buitenaf bereikbaar moet zijn, kan dat via:
+- **ngrok**
 
-### 1. Backend lokaal starten
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-# vul OPENAI_API_KEY en ALLOWED_ORIGINS in
-uvicorn app:app --host 0.0.0.0 --port 8000
-```
+---
 
-### 2. Kennischunks opnieuw bouwen
-```bash
-cd ..
-python scripts/chunk_knowledge.py
-```
+## Hoe werkt het in de praktijk?
 
-### 3. GitHub Pages instellen
-In GitHub:
-- ga naar **Settings**
-- ga naar **Pages**
-- kies branch **main**
-- kies folder **/docs**
+De stroom is als volgt:
 
-### 4. Frontend laten wijzen naar je backend
-Pas in `/docs/config.js` aan:
-```js
-window.DRONETECH_CONFIG = {
-  API_BASE_URL: "https://jouwdomein.nl/api"
-};
-```
+1. Een gebruiker opent DroneTech Coach in Teams of in de browser.
+2. De gebruiker stelt een vraag.
+3. De frontend stuurt die vraag naar de Node-backend.
+4. De backend zoekt in de map met kennisbestanden.
+5. De backend bouwt context op uit de gevonden informatie.
+6. De backend stuurt de vraag + context naar OpenAI.
+7. Het antwoord komt terug naar de frontend.
+8. De gebruiker ziet het antwoord in de chat.
 
-### 5. Teams manifest invullen
-Pas in `/teams-app/manifest.json` aan:
-- `id`
-- `developer`
-- `name`
-- `configurationUrl`
-- `websiteUrl`
-- `validDomains`
+Kort gezegd:
 
-Zip daarna alleen deze 3 bestanden voor Teams:
-- `manifest.json`
-- `color.png`
-- `outline.png`
+**Frontend → Node backend → knowledge-bestanden + OpenAI → antwoord terug**
+
+---
+
+## Techniek
+
+### Gebruikte stack
+- **Node.js**
+- **Express**
+- **OpenAI API**
+- **GitHub Pages** voor de frontend
+- **Microsoft Teams tab** voor gebruik binnen Teams
+- **ngrok** om de lokale backend extern bereikbaar te maken
+- **KaTeX** voor formuleweergave
+
+---
+
+## Projectstructuur
+
+Een mogelijke structuur van het project:
+
+```text
+DroneTech-Coach/
+│
+├── index.html              # frontend
+├── server.js               # Node backend
+├── package.json
+├── package-lock.json
+├── .env                    # API keys en instellingen
+├── knowledge/              # kennisbestanden
+│   ├── pdf/
+│   ├── docx/
+│   ├── pptx/
+│   └── txt/
+├── privacy.html
+├── terms.html
+├── manifest.json           # Teams app manifest
+└── icons/
+    ├── color.png
+    └── outline.png
