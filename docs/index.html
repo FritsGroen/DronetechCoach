@@ -439,14 +439,14 @@
     }
 
     .bubble-content .katex {
-      font-size: 1.06em;
+      font-size: 1.05em;
     }
 
     .bubble-content .katex-display {
+      margin: 10px 0 14px;
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 10px 12px;
-      margin: 14px 0;
+      padding: 10px 12px 4px;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.07);
@@ -1019,23 +1019,105 @@
         /(^|\n)\[\s*\n([\s\S]*?)\n\](?=\n|$)/g,
         (match, prefix, inner) => {
           const trimmedInner = inner.trim();
-          if (!/[\\^_{}]/.test(trimmedInner)) return match;
-          return `${prefix}\\[\n${trimmedInner}\n\\]`;
+
+          if (!/[\\^_{}=]/.test(trimmedInner)) {
+            return match;
+          }
+
+          return `${prefix}\n$$\n${trimmedInner}\n$$\n`;
         }
+      );
+
+      normalized = normalized.replace(
+        /\\\[\s*([\s\S]*?)\s*\\\]/g,
+        (match, inner) => `\n$$\n${inner.trim()}\n$$\n`
+      );
+
+      normalized = normalized.replace(
+        /\\\(\s*([\s\S]*?)\s*\\\)/g,
+        (match, inner) => `$${inner.trim()}$`
       );
 
       return normalized;
     }
 
+    function renderKaTeXString(expression, displayMode = false) {
+      const expr = String(expression || "").trim();
+
+      if (!expr) return "";
+
+      if (window.katex?.renderToString) {
+        try {
+          return window.katex.renderToString(expr, {
+            displayMode,
+            throwOnError: false,
+            strict: "ignore",
+            output: "htmlAndMathml"
+          });
+        } catch (error) {
+          console.warn("KaTeX render fout:", error);
+        }
+      }
+
+      return displayMode
+        ? `<div class="math-fallback">${escapeHtml(expr)}</div>`
+        : `<span class="math-fallback">${escapeHtml(expr)}</span>`;
+    }
+
     function renderAssistantMarkdown(text) {
       try {
         const normalized = normalizeMathDelimiters(text);
-        const rawHtml = window.marked
-          ? marked.parse(normalized)
-          : renderUserText(normalized);
+        const blockMath = [];
+        const inlineMath = [];
 
-        return window.DOMPurify ? DOMPurify.sanitize(rawHtml) : rawHtml;
-      } catch {
+        const addBlockToken = (expr) => {
+          const token = `@@MATH_BLOCK_${blockMath.length}@@`;
+          blockMath.push(renderKaTeXString(expr, true));
+          return token;
+        };
+
+        const addInlineToken = (expr) => {
+          const token = `@@MATH_INLINE_${inlineMath.length}@@`;
+          inlineMath.push(renderKaTeXString(expr, false));
+          return token;
+        };
+
+        let prepared = normalized;
+
+        prepared = prepared.replace(
+          /\$\$\s*([\s\S]*?)\s*\$\$/g,
+          (match, inner) => `\n\n${addBlockToken(inner)}\n\n`
+        );
+
+        prepared = prepared.replace(
+          /(^|[^\$])\$(?!\$)([^$\n]+?)\$(?!\$)/g,
+          (match, prefix, inner) => `${prefix}${addInlineToken(inner)}`
+        );
+
+        let html = window.marked
+          ? marked.parse(prepared)
+          : renderUserText(prepared);
+
+        html = window.DOMPurify ? DOMPurify.sanitize(html) : html;
+
+        html = html.replace(
+          /<p>\s*@@MATH_BLOCK_(\d+)@@\s*<\/p>/g,
+          (match, index) => blockMath[Number(index)] || ""
+        );
+
+        html = html.replace(
+          /@@MATH_BLOCK_(\d+)@@/g,
+          (match, index) => blockMath[Number(index)] || ""
+        );
+
+        html = html.replace(
+          /@@MATH_INLINE_(\d+)@@/g,
+          (match, index) => inlineMath[Number(index)] || ""
+        );
+
+        return html;
+      } catch (error) {
+        console.warn("Markdown/math render fout:", error);
         return renderUserText(text);
       }
     }
@@ -1046,11 +1128,10 @@
       renderMathInElement(container, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
-          { left: "\\[", right: "\\]", display: true },
-          { left: "\\(", right: "\\)", display: false },
           { left: "$", right: "$", display: false }
         ],
         throwOnError: false,
+        strict: "ignore",
         ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
       });
     }
